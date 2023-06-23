@@ -6,12 +6,16 @@ import Navbar from "react-bootstrap/Navbar";
 import FormControl from "react-bootstrap/FormControl";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Button from "react-bootstrap/esm/Button";
+import { Link } from "react-router-dom";
 
 const Header = () => {
+
     return (
         <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
             <Container>
-                <Navbar.Brand href="/">Note Zipper</Navbar.Brand>
+                <Navbar.Brand>
+                    <Link to="/" style={{ color: 'white' }}>Note Zipper</Link>
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="m-auto">
@@ -27,7 +31,9 @@ const Header = () => {
                         </Button>
                     </Nav>
                     <Nav>
-                        <Nav.Link>My Notes</Nav.Link>
+                        <Nav.Link href="/mynotes" >
+                            <Link to="/mynotes" style={{ color: 'white' }}>My Notes</Link>
+                        </Nav.Link>
                         <NavDropdown title="Sanju" id="basic-nav-dropdown">
                             <NavDropdown.Item href="/profile">My Profile</NavDropdown.Item>
 
